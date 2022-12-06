@@ -5,7 +5,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
@@ -17,8 +16,19 @@ public class HomePage {
     }
 
     public LoginPage clickFormAuthentication(){
-        driver.findElement(formAuthenticationLink).click();
+        clickLink("Form Authentication");
         return new LoginPage(driver);
     }
 
+    public DropDownPage clickDoropDown(){
+        clickLink("Dropdown");
+        return new DropDownPage(driver);
+    }
+    public ForgotPasswordPage clickForgotPassword(){
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+    private void clickLink(String clickLink){
+        driver.findElement(By.linkText(clickLink)).click();
+    }
 }
