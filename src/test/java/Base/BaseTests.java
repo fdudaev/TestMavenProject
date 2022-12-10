@@ -1,5 +1,6 @@
 package Base;
 
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -13,7 +14,7 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources1/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "resources1/chromedriver.exe"); // creating property file
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
         driver.manage().window().maximize();
@@ -22,7 +23,7 @@ public class BaseTests {
 
   //  @AfterClass
     public void tearDown(){
-        driver.quit();
+       driver.quit();
     }
 
 
