@@ -24,13 +24,30 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
-    public DropDownPage clickDoropDown(){
+    public DropDownPage clickDropDown(){
         clickLink("Dropdown");
         return new DropDownPage(driver);
     }
     public ForgotPasswordPage clickForgotPassword(){
         clickLink("Forgot Password");
         return new ForgotPasswordPage(driver);
+    }
+
+    public AlertsPage clickJavaScriptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+    public KeyPressesPage clickKeyPresses(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+    public WysiwygEditorPage clickWysiwygEditor(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
     }
     private void clickLink(String clickLink){
         driver.findElement(By.linkText(clickLink)).click();
