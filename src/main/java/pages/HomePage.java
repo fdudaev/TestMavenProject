@@ -49,6 +49,19 @@ public class HomePage {
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
     }
+    public DynamicLoadingPage clickDynamicLoadingPage(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+    public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     private void clickLink(String clickLink){
         driver.findElement(By.linkText(clickLink)).click();
     }

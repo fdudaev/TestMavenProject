@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class BaseTests {
     private WebDriver driver;
@@ -17,6 +19,7 @@ public class BaseTests {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "resources1/chromedriver.exe"); // creating property file
         driver = new ChromeDriver();
+        //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         goHome();
 
         driver.manage().window().maximize();
@@ -27,7 +30,7 @@ public class BaseTests {
         driver.get("https://the-internet.herokuapp.com/");
     }
 
-  //  @AfterClass
+   // @AfterClass
     public void tearDown(){
        driver.quit();
     }
