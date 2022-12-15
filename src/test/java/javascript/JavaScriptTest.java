@@ -14,4 +14,5 @@ public class JavaScriptTest extends BaseTests {
         homePage.clickInfiniteScroll().scrollToParagraph(5);
     }
 
+
 }
