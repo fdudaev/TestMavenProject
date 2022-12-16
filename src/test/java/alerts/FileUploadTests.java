@@ -3,8 +3,6 @@ package alerts;
 import Base.BaseTests;
 import org.testng.annotations.Test;
 
-import java.security.PublicKey;
-
 import static org.testng.Assert.assertEquals;
 
 public class FileUploadTests extends BaseTests {

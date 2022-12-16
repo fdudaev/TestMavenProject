@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.SecureAreaPage;
 
-import static org.testng.Assert.*;
-
 public class LoginTest extends BaseTests {
 
     @Test
